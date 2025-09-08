@@ -81,7 +81,7 @@ pnpm wrangler deploy --name nextdrizzle
 
 ### Worker-configuration
 
-Con este comando generamos el archivo worker-configuration.d.ts, este nos permitira manejar la configuracion de los servicios de cloudflare me diante typescript
+Con este comando generamos el archivo worker-configuration.d.ts, este nos permitira manejar la configuracion de los servicios de cloudflare me diante typescript 2
 
 ```
 pnpm cf-typegen
