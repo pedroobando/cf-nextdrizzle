@@ -11,7 +11,7 @@
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
 		"db:generate": "drizzle-kit generate",
-    "db:up": "drizzle-kit up:sqlite"
+		"db:up": "drizzle-kit up:sqlite"
 	},
 	"dependencies": {
 		"@opennextjs/cloudflare": "^1.8.0",

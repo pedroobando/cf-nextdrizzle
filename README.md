@@ -125,7 +125,7 @@ pnpm wrangler d1 execute nextdrizzle-d1  --local --file=./drizzle/migrations/000
 Genera en remotamente la base de datos en cloudflare
 
 ```
-pnpm wrangler d1 execute blogDB  --remote --file=./drizzle/migrations/0000_naive_phil_sheldon.sql
+pnpm wrangler d1 execute nextdrizzle-d1  --remote --file=./drizzle/migrations/0001_rainy_cable.sql
 ```
 
 ### Modificacion variable
