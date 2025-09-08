@@ -17,6 +17,19 @@
 	},
 	"observability": {
 		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "nextdrizzle-d1",
+			"database_id": "67d1b7f3-6f95-46f6-aa6b-1f35651dcda5"
+		}
+	],
+	"vars": { 
+		"MY_VARIABLE": "production_value",
+		"MY_VAR": "my-variable",
+		"JWT_EXPIRES": 30,
+		"CORS_ORIGIN": ["http://localhost:3000"]
 	}
 	/**
 	 * Smart Placement
@@ -29,11 +42,7 @@
 	 * databases, object storage, AI inference, real-time communication and more.
 	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
-	/**
-	 * Environment Variables
-	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
-	 */
-	// "vars": { "MY_VARIABLE": "production_value" }
+	
 	/**
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
