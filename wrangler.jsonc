@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "cfnextdrizzle",
+	"name": "nextdrizzle",
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2025-03-01",
 	"compatibility_flags": [
@@ -19,9 +19,6 @@
 		"enabled": true
 	},
 	"vars": { 
-		"MY_VARIABLE": "production_value",
-		"MY_VAR": "my-variable",
-		"JWT_EXPIRES": 30,
 		"CORS_ORIGIN": ["http://localhost:3000"]
 	}
 	/**
