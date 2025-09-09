@@ -1,6 +1,7 @@
 // import { getAllPeoples, insertPeoples } from '@/actions/getPeoples';
-
 import { personas } from '@/seed';
+
+export const runtime = 'edge';
 
 export default async function PageHome() {
   return (
