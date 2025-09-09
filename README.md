@@ -73,12 +73,6 @@ pnpm db:generate
 
 ## Cloudflate Worker
 
-### Doployment
-
-Para hacer el deploy en worker:
-
-pnpm wrangler deploy --name nextdrizzle
-
 ### Worker-configuration
 
 Con este comando generamos el archivo worker-configuration.d.ts, este nos permitira manejar la configuracion de los servicios de cloudflare me diante typescript 2
@@ -139,14 +133,36 @@ pnpm wrangler types
 [For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
 
 ```txt
-npm run cf-typegen
+pnpm run cf-typegen
 ```
 
-Pass the `CloudflareBindings` as generics when instantiation `Hono`:
+### Deployment
 
-```ts
-// src/index.ts
-const app = new Hono<{ Bindings: CloudflareBindings }>();
+#### Variables
+
+Antes de realizar el deployments, debemos de actualizar todas nuestra variables, para que se encuentren en el archivo `worker-configuration.d.ts`
+
+```
+pnpm wrangler types
+```
+
+#### workers_dev
+
+Agregar el workers_dev en true, en el archivo wrangler.jsonc
+
+```
+	"name": "nextdrizzle",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2025-03-01",
+	"workers_dev": true,
+```
+
+#### deployment
+
+Para hacer el deploy en worker, se debe colocar el mismo nombre que tiene en el archivo `wrangler.jsonc`
+
+```
+pnpm wrangler deploy --name nextdrizzle
 ```
 
 ## Guias
