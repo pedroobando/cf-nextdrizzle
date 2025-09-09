@@ -8,6 +8,7 @@
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2025-03-01",
 	"workers_dev": true,
+	
 	"compatibility_flags": [
 		"nodejs_compat",
 		"global_fetch_strictly_public"
@@ -32,6 +33,12 @@
 			"binding": "DBD1",
 			"database_name": "nextdrizzle-d1",
 			"database_id": "cb72f1e8-5e97-4ea1-9299-32cdaabd79ea"
+		}
+	],
+	"routes": [
+		{
+			"pattern": "nextdrizzle.db9.uk",
+			"custom_domain": true
 		}
 	]
 	/**
