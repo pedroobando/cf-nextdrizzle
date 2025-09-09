@@ -1,13 +1,8 @@
-import { getAllPeoples, insertPeoples } from '@/actions/getPeoples';
+// import { getAllPeoples, insertPeoples } from '@/actions/getPeoples';
 
-// import { personas } from '@/seed';
+import { personas } from '@/seed';
 
 export default async function PageHome() {
-  const {} = await insertPeoples();
-  const { data, error } = await getAllPeoples();
-
-  if (error) throw new Error('Ocurrio un error no controlado');
-
   return (
     <>
       <h1 className="text-2xl">Testing 2</h1>
@@ -24,7 +19,7 @@ export default async function PageHome() {
             </tr>
           </thead>
           <tbody>
-            {data?.map((people) => (
+            {personas.map((people) => (
               <tr key={people.id} className="leading-8.5">
                 <td className="w-3/12">{people.fullname}</td>
                 <td className="1/12">{people.dni}</td>

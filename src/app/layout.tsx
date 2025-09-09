@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { initializeDatabase } from '@/actions/getPeoples';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -23,10 +22,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  if (typeof process.env.DB !== 'undefined') {
-    await initializeDatabase(process.env.DB as unknown as D1Database);
-  }
-
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
