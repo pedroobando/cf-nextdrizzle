@@ -8,7 +8,7 @@ declare namespace Cloudflare {
   }
 }
 interface CloudflareEnv extends Cloudflare.Env {
-  DB: D1Database;
+  DBD1: D1Database;
 }
 
 // Begin runtime types

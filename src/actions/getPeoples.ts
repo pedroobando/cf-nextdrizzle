@@ -48,3 +48,19 @@ export async function insertPeoples() {
     return { success: false, error: 'Error al obtener clientes' };
   }
 }
+
+export async function deletePeople(): Promise<{ success: boolean; error?: string | undefined }> {
+  try {
+    if (!d1Connection.isInitialized()) {
+      d1Connection.initialize(d1BindingDB);
+    }
+
+    const db = d1Connection.getDB();
+    await db.delete(people);
+
+    return { success: true, error: undefined };
+  } catch (error) {
+    console.error('Error al obtener clientes:', error);
+    return { success: false, error: 'Error al obtener clientes' };
+  }
+}

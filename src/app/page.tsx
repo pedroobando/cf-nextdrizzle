@@ -1,9 +1,9 @@
-import { getAllPeoples, insertPeoples } from '@/actions/getPeoples';
+import { getAllPeoples } from '@/actions/getPeoples';
 
 // import { personas } from '@/seed';
 
 export default async function PageHome() {
-  const {} = await insertPeoples();
+  // const {} = await insertPeoples();
   const { data, error } = await getAllPeoples();
 
   if (error) throw new Error('Ocurrio un error no controlado');

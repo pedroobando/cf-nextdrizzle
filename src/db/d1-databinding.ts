@@ -2,4 +2,4 @@
 
 import { getCloudflareContext } from '@opennextjs/cloudflare';
 
-export const d1BindingDB = (await getCloudflareContext({ async: true })).env.DB as D1Database;
+export const d1BindingDB = (await getCloudflareContext({ async: true })).env.DBD1 as D1Database;
