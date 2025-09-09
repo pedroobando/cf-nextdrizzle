@@ -6,7 +6,7 @@ export default async function PageHome() {
   return (
     <>
       <h1 className="text-2xl">Testing 2</h1>
-
+      <h2>Hola munde</h2>
       <div className="p-4 flex w-full justify-center ">
         <table className="w-8/12">
           <thead className="">
